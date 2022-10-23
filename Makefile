@@ -4,14 +4,16 @@ up:
 down:
 	docker compose down --remove-orphans --volumes
 
-app-install:
-	docker compose run --rm app-node-cli pnpm install
+restart: down up
 
-app-lint:
-	docker compose run --rm app-node-cli pnpm run lint
+frontend-install:
+	docker compose run --rm frontend-node-cli pnpm install
 
-app-fix:
-	docker compose run --rm app-node-cli pnpm run fix
+frontend-lint:
+	docker compose run --rm frontend-node-cli pnpm run lint
 
-app-pretty:
-	docker compose run --rm app-node-cli pnpm run pretty
+frontend-fix:
+	docker compose run --rm frontend-node-cli pnpm run fix
+
+frontend-pretty:
+	docker compose run --rm frontend-node-cli pnpm run pretty
