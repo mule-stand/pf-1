@@ -3,8 +3,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "serve": "NODE_OPTIONS=--loader=ts-node/esm webpack serve --config config/webpack.development.config.ts",
-    "build": "NODE_OPTIONS=--loader=ts-node/esm webpack --config config/webpack.development.config.ts",
     "lint": "eslint . --ext .js --ext .ts --ext .tsx",
     "fix": "eslint . --fix --ext .js --ext .ts --ext .tsx",
     "pretty": "prettier --write ."
